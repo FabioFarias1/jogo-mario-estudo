@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+.game-board{
+    width: 100%;
+    height: 611px;
+    border-bottom: 15px solid #1d8c01 ;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+.resultado{
+    display: none;
+    position: absolute;
+    background-color: rgb(247, 247, 247);
+    width: 30%;
+    height: 55%;
+    border-radius: 25px;
+    border: solid black 1px;
+    top: 50%;
+    left: 50%;
+    transform : translate(-50%, -50%);
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 25px;
+    gap: 50px;
+    box-shadow: 7px 7px 9px 5px black;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+}
+ .resultado .resultname{
+    font-size: 35px;
+ }
+ /* .resultado button{
+    outline: none;
+    color: white;
+    width: 120px;
+    height: 40px;
+    background-color: red;
+    border: solid black 2px;
+    border-radius: 10px;
+    animation: start-button 1s infinite linear ;
+    top: 83%;
+    position: absolute;
+} */
+
+.pipe{
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 1.5s infinite linear;
+
+}
+.mario{
+    width: 150px;
+    position: absolute;
+    bottom: 0px;
+}
+.jump{
+    animation: jump 500ms ease-out;
+}
+
+.clouds{
+    width: 400px;
+    position: absolute;
+    animation: clouds-animation 20s infinite linear;
+}
+
+.game-over-text{
+    display: none;
+}
+
+.game-over-text-over{
+    position: absolute;
+    width: 200px;
+    right: 43%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.start{
+    position: absolute;
+    width: 260px;
+    right: 40.5%;
+    top: 50%;
+    cursor: pointer;
+}
+.start:hover{
+    width: 280px;
+    right: 39.5%;
+    top: 50%
+}
+.start:active{
+    width: 260px;
+    right: 40.5%;
+    top: 50%; 
+}
+.contador{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    font-size: 35pt;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+}
+
+/* .contador p {
+    font-size: 20px;
+} */
+
+
+@keyframes pipe-animation {
+    from{
+        right: 0;
+    }
+
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    0%{
+        bottom: 0px;
+    }
+    40%{
+        bottom: 200px;
+    }
+    50%{
+        bottom: 200px;
+    }
+    60%{
+        bottom: 200px;
+    }
+    70%{
+        bottom: 200px;
+        
+    }
+    100%{
+        bottom: 0px;
+    }
+}
+@keyframes clouds-animation {
+    from{
+        right: -400px;
+    }
+    to{
+        right: 100%;
+    }
+}
+@keyframes start-button {
+    from{
+        width: 120px;
+        height: 40px;
+    }
+    to{
+        width: 122px;
+        height: 42px;
+    }
+}
